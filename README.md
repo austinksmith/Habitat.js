@@ -48,13 +48,13 @@ A collection of useful cross platform environmental detection methods, originall
   habitat.isIE(version); // true or false
   ``` 
 
-  * logicalThreads - Determine number of logical threads available.
+  * logicalThreads - Determine number of logical threads available, Node.js or Web detection. (Respects Firefox per origin limit of 20)
 
   ```js
   habitat.logicalThreads(); // integer
   ``` 
 
-  * blob - Detects execution environments blob builder.
+  * blob - Detects execution environments data blob builder, supports all vendor prefixes.
 
   ```js
   var blobMaker = habitat.blob(); // constructor
