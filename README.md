@@ -41,7 +41,7 @@ A collection of useful cross platform environmental detection methods, originall
 
   ## Once you've installed Habitat.js you should now be able to run the following methods.
 
-  * ## isIE  ## - Determine if execution environment is Internet Explorer by version.
+  * isIE - Determine if execution environment is Internet Explorer by version.
 
   ```js
   var version = 10;
