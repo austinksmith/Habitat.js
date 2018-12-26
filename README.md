@@ -41,78 +41,78 @@ A collection of useful cross platform environmental detection methods, originall
 
   * Once you've installed Habitat.js you should now be able to run the following methods.
 
-  ### isIE - Determine if execution environment is Internet Explorer by version, returns true or false
+  ### isIE - Determine if execution environment is Internet Explorer by version.
 
   ```js
   var version = 10;
-  habitat.isIE(version);
+  habitat.isIE(version); // true or false
   ``` 
 
-  ### logicalThreads - Determine number of logical threads available, returns an integer
+  ### logicalThreads - Determine number of logical threads available.
 
   ```js
-  habitat.logicalThreads();
+  habitat.logicalThreads(); // integer
   ``` 
 
-  ### blob - Detects execution environments blob builder, returns a constructor
+  ### blob - Detects execution environments blob builder.
 
   ```js
-  var blobMaker = habitat.blob();
+  var blobMaker = habitat.blob(); // constructor
   new blobMaker(...);
   ``` 
 
-  ### browser - Determine if execution environment is a web browser, returns true or false
+  ### browser - Determine if execution environment is a web browser.
 
   ```js
-  habitat.browser();
+  habitat.browser(); // true or false
   ``` 
 
-  ### webWorker - Determine if execution environment is a webWorker, returns true or false
+  ### webWorker - Determine if execution environment is a webWorker.
 
   ```js
-  habitat.webWorker();
+  habitat.webWorker(); // true or false
   ``` 
 
-  ### node - Determine if execution environment is Node.js, returns true or false
+  ### node - Determine if execution environment is Node.js.
 
   ```js
-  habitat.node();
+  habitat.node(); // true or false
   ``` 
 
-  ### reactNative - Determine if execution environment is reactNative, returns true or false
+  ### reactNative - Determine if execution environment is reactNative.
 
   ```js
-  habitat.reactNative();
+  habitat.reactNative(); // true or false
   ``` 
 
-  ### shell - Determine if execution environment is a shell, returns true or false
+  ### shell - Determine if execution environment is a shell.
 
   ```js
-  habitat.shell();
+  habitat.shell(); // true or false
   ``` 
 
-  ### transferrable - Determine if execution environment supports transferrable objects (typed arrays), returns true or false
+  ### transferrable - Determine if execution environment supports transferrable objects (typed arrays).
 
   ```js
-  habitat.transferrable();
+  habitat.transferrable(); // true or false
   ``` 
 
-  ### atomics - Determine if execution environment supports atomic operations (shared array buffers), returns true or false
+  ### atomics - Determine if execution environment supports atomic operations (shared array buffers).
 
   ```js
-  habitat.atomics();
+  habitat.atomics(); // true or false
   ``` 
 
-  ### proxies - Determine if execution environment supports proxy objects, returns true or false
+  ### proxies - Determine if execution environment supports proxy objects.
 
   ```js
-  habitat.proxies();
+  habitat.proxies(); // true or false
   ``` 
 
-  ### sharedWorkers - Determine if execution environment supports sharedWorkers, returns true or false
+  ### sharedWorkers - Determine if execution environment supports sharedWorkers
 
   ```js
-  habitat.sharedWorkers();
+  habitat.sharedWorkers(); // true or false
   ```
 
 
