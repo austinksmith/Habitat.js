@@ -44,75 +44,75 @@ A collection of useful cross platform environmental detection methods, originall
   ### isIE - Determine if execution environment is Internet Explorer by version, returns true or false
 
   ```js
-    var version = 10;
-  	habitat.isIE(version);
+  var version = 10;
+  habitat.isIE(version);
   ``` 
 
   ### logicalThreads - Determine number of logical threads available, returns an integer
 
   ```js
-  	habitat.logicalThreads();
+  habitat.logicalThreads();
   ``` 
 
   ### blob - Detects execution environments blob builder, returns a constructor
 
   ```js
-  	var blobMaker = habitat.blob();
-  	new blobMaker(...);
+  var blobMaker = habitat.blob();
+  new blobMaker(...);
   ``` 
 
   ### browser - Determine if execution environment is a web browser, returns true or false
 
   ```js
-  	habitat.browser();
+  habitat.browser();
   ``` 
 
   ### webWorker - Determine if execution environment is a webWorker, returns true or false
 
   ```js
-  	habitat.webWorker();
+  habitat.webWorker();
   ``` 
 
   ### node - Determine if execution environment is Node.js, returns true or false
 
   ```js
-  	habitat.node();
+  habitat.node();
   ``` 
 
   ### reactNative - Determine if execution environment is reactNative, returns true or false
 
   ```js
-  	habitat.reactNative();
+  habitat.reactNative();
   ``` 
 
   ### shell - Determine if execution environment is a shell, returns true or false
 
   ```js
-  	habitat.shell();
+  habitat.shell();
   ``` 
 
   ### transferrable - Determine if execution environment supports transferrable objects (typed arrays), returns true or false
 
   ```js
-  	habitat.transferrable();
+  habitat.transferrable();
   ``` 
 
   ### atomics - Determine if execution environment supports atomic operations (shared array buffers), returns true or false
 
   ```js
-  	habitat.atomics();
+  habitat.atomics();
   ``` 
 
   ### proxies - Determine if execution environment supports proxy objects, returns true or false
 
   ```js
-  	habitat.proxies();
+  habitat.proxies();
   ``` 
 
   ### sharedWorkers - Determine if execution environment supports sharedWorkers, returns true or false
 
   ```js
-  	habitat.sharedWorkers();
+  habitat.sharedWorkers();
   ```
 
 
