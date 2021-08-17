@@ -52,59 +52,66 @@ class habitatDetector {
   }
 
   /**
+  * @function isFireox - Detect firefox browser
+  */
+  isFirefox() {
+    return (navigator.userAgent.toLowerCase().indexOf('firefox') !== -1);
+  }
+
+  /**
   * @function locateWorkerObject - Attempts to find a global Worker object
   */
   locateWorkerObject() {
-    return typeof Worker !== 'undefined' ? Worker : false;
+    return (typeof Worker !== 'undefined' ? Worker : false);
   }
 
   /**
   * @function locateSharedWorkerObject - Attempts to find a global SharedWorker object
   */
   locateSharedWorkerObject() {
-    return typeof SharedWorker !== 'undefined' ? SharedWorker : false;
+    return (typeof SharedWorker !== 'undefined' ? SharedWorker : false);
   }
 
   /**
   * @function isBrowser - Detects if execution environment is a browser
   */
   isBrowser() {
-    return typeof window === "object";
+    return (typeof window === "object");
   }
 
   /**
   * @function isInternetExplorer - Detects if execution environment is internet explorer
   */
-  isInternetExplorer(version) {
-    return (new RegExp('msie' + (!isNaN(version) ? ('\\s'+version) : ''), 'i').test(navigator.userAgent));
+  isInternetExplorer() {
+    return (navigator.userAgent.indexOf("MSIE ") !== -1 || navigator.userAgent.indexOf("Trident/") !== -1);
   }
 
   /**
   * @function isNode - Detects if execution environment is node.js
   */
   isNode() {
-    return typeof process === "object" && typeof require === "function" && !this.isWebWorker() && !this.browser;
+    return (typeof process === "object" && typeof require === "function" && !this.isWebWorker() && !this.browser);
   }
 
   /**
   * @function isWebWorker - Detects if execution environment is a webworker
   */
   isWebWorker() {
-    return typeof importScripts === "function";
+    return (typeof importScripts === "function" && !this.isReactNative());
   }
 
   /**
   * @function isReactNative - Detects if execution environment is reactNative
   */
   isReactNative() {
-    return !this.isNode() && typeof global === 'object' && !this.browser;
+    return (typeof navigator !== "undefined" && typeof navigator.product !== "undefined" && navigator.product == "ReactNative");
   }
 
   /**
   * @function isShell - Detects if execution environment is a shell
   */
   isShell() {
-    return this.browser && !this.isNode() && !this.isWebWorker() && !this.isReactNative();
+    return ((typeof navigator === "undefined") && !this.isNode() && !this.isWebWorker() && !this.isReactNative());
   }
 
   /**
